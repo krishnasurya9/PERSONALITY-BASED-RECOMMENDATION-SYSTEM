@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Taste Engine</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="noise"></div>
+  
+  <header>
+    <div class="logo">
+      <div class="logo-text">PT</div>
+      <div class="logo-circle"></div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#start">Start</a></li>
+        <li><a href="#how">How it works</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="about">
+      <div class="hero-content">
+        <h1>Personal Taste Engine</h1>
+        <p>Discover entertainment perfectly aligned with your personality traits</p>
+        <a href="#start" class="cta-button">Discover Your Taste</a>
+      </div>
+      <div class="hero-visual">
+        <div class="orbit">
+          <div class="planet planet-movies">Movies</div>
+          <div class="planet planet-music">Music</div>
+          <div class="planet planet-books">Books</div>
+          <div class="planet planet-games">Games</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="how-it-works" id="how">
+      <h2>How It Works</h2>
+      <div class="steps">
+        <div class="step">
+          <div class="step-number">01</div>
+          <h3>Personality Assessment</h3>
+          <p>Answer a series of questions that help us understand your personality traits and preferences.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">02</div>
+          <h3>Domain Selection</h3>
+          <p>Choose an entertainment category that interests you: Movies, Music, Books, or Games.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">03</div>
+          <h3>Tailored Questions</h3>
+          <p>Answer domain-specific questions that refine our understanding of your tastes.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">04</div>
+          <h3>Get Recommendations</h3>
+          <p>Receive personalized recommendations based on your unique personality profile.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="start-questionnaire" id="start">
+      <h2>Start Your Discovery</h2>
+      <p>Find entertainment that resonates with your unique personality</p>
+      <button id="startBtn" class="start-button">Begin the Journey</button>
+    </section>
+  </main>
+
+  <!-- Questionnaire Modal -->
+  <div id="questionnaireModal" class="modal">
+    <div class="modal-content">
+      <span class="close-button">&times;</span>
+      
+      <!-- Questionnaire Section -->
+      <div id="questionnaireSection" class="hidden">
+        <div class="progress-container">
+          <div id="progressBar" class="progress-bar"></div>
+        </div>
+        <h2 id="questionText"></h2>
+        <div id="options" class="options-grid"></div>
+        <div class="navigation-buttons">
+          <button id="prevBtn" class="nav-button hidden">Previous</button>
+          <button id="nextBtn" class="nav-button">Next</button>
+        </div>
+      </div>
+      
+      <!-- Results Section -->
+      <div id="resultsSection" class="hidden">
+        <h2>Your Personal Taste Profile</h2>
+        
+        <div id="loadingIndicator" class="hidden">
+            <div class="spinner"></div>
+            <p>Analyzing your personality...</p>
+        </div>
+
+        <div id="resultsContent" class="hidden">
+            <div class="results-container">
+            <div class="personality-result">
+            <h3>Personality Type</h3>
+            <p id="personalityResult"></p>
+          </div>
+          <div class="recommendations-result">
+            <h3>Recommendations</h3>
+            <p id="recommendationResult"></p>
+          </div>
+        </div>
+        <button id="restartBtn" class="restart-button">Try Again</button>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2025 Personal Taste Engine. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js">
+    const baseUrl = "http://127.0.0.1:8000";
+  </script>
+</body>
+</html>

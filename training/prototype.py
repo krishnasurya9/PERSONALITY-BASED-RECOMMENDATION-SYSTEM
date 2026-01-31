@@ -75,7 +75,7 @@ def calculate_recommendation(domain, general_scores, domain_scores):
 
 # === Real-Time APIs ===
 
-TMDB_API_KEY = "6d44637ead16e0d6f5e64ee6bb18106e"
+TMDB_API_KEY = ""
 def fetch_movie_recommendations(genre):
     tmdb_genre_ids = {
         "Comedy": 35,
@@ -95,7 +95,7 @@ def fetch_movie_recommendations(genre):
         print("TMDb error:", e)
         return []
 
-YOUTUBE_API_KEY = "AIzaSyDYCA3f31SxxDbGn6f-W3aEYdG3k9HdTXc"
+YOUTUBE_API_KEY = ""
 def fetch_music_recommendations(genre):
     url = "https://www.googleapis.com/youtube/v3/search"
     params = {
@@ -115,7 +115,7 @@ def fetch_music_recommendations(genre):
         print("YouTube API error:", e)
         return []
 
-BOOKS_API_KEY = "AIzaSyCtlN-e-yF6Wyb1GJKto6puuKeiuNboGuo"
+BOOKS_API_KEY = "
 def fetch_book_recommendations(genre):
     url = "https://www.googleapis.com/books/v1/volumes"
     params = {"q": f"subject:{genre}", "key": BOOKS_API_KEY, "maxResults": 5}
@@ -127,7 +127,7 @@ def fetch_book_recommendations(genre):
         print("Google Books API error:", e)
         return []
 
-RAWG_API_KEY = "ba7003d252514314af6cc83e220c0c4a"
+RAWG_API_KEY = ""
 def fetch_game_recommendations(genre):
     url = "https://api.rawg.io/api/games"
     params = {"key": RAWG_API_KEY, "genres": genre.lower(), "page_size": 5}

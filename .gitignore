@@ -1,0 +1,26 @@
+# System
+__pycache__/
+*.py[cod]
+.env
+.venv/
+venv/
+
+# IDE
+.idea/
+.vscode/
+
+# Assets
+# models/
+# data/
+
+# Assets (Ignore large files)
+*.pth
+*.csv
+*.jsonl
+models/*
+!models/README.txt
+data/*
+!data/README.txt
+
+# Backups
+_legacy_backup/

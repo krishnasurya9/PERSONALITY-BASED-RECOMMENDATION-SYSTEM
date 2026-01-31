@@ -1,0 +1,90 @@
+=== PERSONALITY MODEL EVALUATION RESULTS ===
+
+OVERALL METRICS
+----------------------------------------
+accuracy: 0.9562
+precision_micro: 0.9562
+recall_micro: 0.9562
+f1_micro: 0.9562
+precision_macro: 0.7887
+recall_macro: 0.6961
+f1_macro: 0.5602
+precision_weighted: 0.9684
+recall_weighted: 0.9562
+f1_weighted: 0.9526
+mcc: 0.5425
+kappa: 0.5298
+hamming_loss: 0.0438
+
+PER-TRAIT METRICS
+----------------------------------------
+
+OPENNESS
+--------------------
+accuracy: 1.0000
+precision: 1.0000
+recall: 1.0000
+f1: 1.0000
+mcc: 0.9998
+kappa: 0.9998
+hamming_loss: 0.0000
+jaccard: 1.0000
+roc_auc: 0.9998
+log_loss: 0.0002
+
+
+CONSCIENTIOUSNESS
+--------------------
+accuracy: 1.0000
+precision: 1.0000
+recall: 1.0000
+f1: 1.0000
+mcc: 1.0000
+kappa: 1.0000
+hamming_loss: 0.0000
+jaccard: 1.0000
+roc_auc: 1.0000
+log_loss: 0.0000
+
+
+EXTRAVERSION
+--------------------
+accuracy: 1.0000
+precision: 1.0000
+recall: 1.0000
+f1: 1.0000
+mcc: 1.0000
+kappa: 1.0000
+hamming_loss: 0.0000
+jaccard: 1.0000
+roc_auc: 1.0000
+log_loss: 0.0000
+
+
+AGREEABLENESS
+--------------------
+accuracy: 1.0000
+precision: 1.0000
+recall: 1.0000
+f1: 1.0000
+mcc: 1.0000
+kappa: 1.0000
+hamming_loss: 0.0000
+jaccard: 1.0000
+roc_auc: 1.0000
+log_loss: 0.0000
+
+
+NEUROTICISM
+--------------------
+accuracy: 1.0000
+precision: 1.0000
+recall: 1.0000
+f1: 1.0000
+mcc: 1.0000
+kappa: 1.0000
+hamming_loss: 0.0000
+jaccard: 1.0000
+roc_auc: 1.0000
+log_loss: 0.0000
+

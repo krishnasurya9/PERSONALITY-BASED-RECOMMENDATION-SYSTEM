@@ -1,0 +1,90 @@
+=== PERSONALITY MODEL EVALUATION RESULTS ===
+
+OVERALL METRICS
+----------------------------------------
+accuracy: 0.0139
+precision_micro: 0.0139
+recall_micro: 0.0139
+f1_micro: 0.0139
+precision_macro: 0.1824
+recall_macro: 0.2053
+f1_macro: 0.0167
+precision_weighted: 0.0241
+recall_weighted: 0.0139
+f1_weighted: 0.0019
+mcc: 0.0295
+kappa: 0.0008
+hamming_loss: 0.9861
+
+PER-TRAIT METRICS
+----------------------------------------
+
+OPENNESS
+--------------------
+accuracy: 0.9894
+precision: 0.9788
+recall: 0.9894
+f1: 0.9841
+mcc: 0.0000
+kappa: 0.0000
+hamming_loss: 0.0106
+jaccard: 0.9788
+roc_auc: 0.5000
+log_loss: 0.3834
+
+
+CONSCIENTIOUSNESS
+--------------------
+accuracy: 0.9787
+precision: 0.9578
+recall: 0.9787
+f1: 0.9681
+mcc: 0.0000
+kappa: 0.0000
+hamming_loss: 0.0213
+jaccard: 0.9578
+roc_auc: 0.5000
+log_loss: 0.7689
+
+
+EXTRAVERSION
+--------------------
+accuracy: 0.0226
+precision: 0.0005
+recall: 0.0226
+f1: 0.0010
+mcc: 0.0000
+kappa: 0.0000
+hamming_loss: 0.9774
+jaccard: 0.0005
+roc_auc: 0.5000
+log_loss: 35.2279
+
+
+AGREEABLENESS
+--------------------
+accuracy: 0.9824
+precision: 0.9651
+recall: 0.9824
+f1: 0.9737
+mcc: 0.0000
+kappa: 0.0000
+hamming_loss: 0.0176
+jaccard: 0.9651
+roc_auc: 0.5000
+log_loss: 0.6344
+
+
+NEUROTICISM
+--------------------
+accuracy: 0.9824
+precision: 0.9652
+recall: 0.9824
+f1: 0.9737
+mcc: 0.0000
+kappa: 0.0000
+hamming_loss: 0.0176
+jaccard: 0.9652
+roc_auc: 0.5000
+log_loss: 0.6328
+

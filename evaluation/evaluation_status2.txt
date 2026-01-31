@@ -1,0 +1,21 @@
+✅ Evaluation script initialized...
+✅ CUDA Available! Running on GPU 🚀
+🔹 Evaluation will run on: cuda
+
+🔹 Loading dataset...
+✅ Data loaded! Shape: (1015341, 6)
+✅ Evaluating model for traits: Openness, Conscientiousness, Extraversion, Agreeableness, Neuroticism
+🔹 Loading best model...
+✅ Model loaded successfully!
+✅ Test data prepared: 203069 samples
+🔹 Running predictions...
+✅ Predictions complete!
+
+🔹 Calculating evaluation metrics...
+✅ Metrics calculation complete!
+✅ Results saved to A:\projects\project3\evaluation\results2.txt
+
+🔹 Generating visualizations...
+✅ Visualizations saved to A:\projects\project3\evaluation\plots2
+
+✅ Evaluation completed successfully! 🎉

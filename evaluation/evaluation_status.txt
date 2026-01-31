@@ -1,0 +1,136 @@
+✅ Validation analysis initialized...
+✅ Using device: cuda
+🔹 Loading dataset...
+✅ Data loaded! Shape: (1015341, 6)
+
+=== 1. DATA LEAKAGE ANALYSIS ===
+Duplicate prompts in dataset: 1015183 (99.98%)
+
+Label distribution:
+Openness: {'Prefers routine, less curious': 1004760, 'Very imaginative, loves new experiences': 9388, 'Somewhat open to new experiences': 1193}
+Conscientiousness: {'Disorganized, spontaneous': 993522, 'Highly organized, goal-oriented': 20176, 'Moderately disciplined': 1643}
+Extraversion: {'Introverted, prefers solitude': 989726, 'Highly sociable, energetic': 22756, 'Sometimes outgoing, sometimes reserved': 2859}
+Agreeableness: {'Competitive, less empathetic': 997278, 'Very compassionate, trusts others easily': 16023, 'Moderately cooperative': 2040}
+Neuroticism: {'Emotionally stable, calm': 997404, 'Prone to stress, emotionally reactive': 17937}
+
+=== 2. CROSS-VALIDATION ===
+
+Running 5-fold cross-validation with UNTRAINED model (random weights)
+This tests for data leakage - if accuracy is high with random weights, there's a problem
+
+Fold 1/5
+Evaluating untrained model (random weights)...
+Accuracy: 0.0180, F1: 0.0160
+
+Fold 2/5
+Evaluating untrained model (random weights)...
+Accuracy: 0.9305, F1: 0.9110
+
+Fold 3/5
+Evaluating untrained model (random weights)...
+Accuracy: 0.0185, F1: 0.0018
+
+Fold 4/5
+Evaluating untrained model (random weights)...
+Accuracy: 0.9470, F1: 0.9293
+
+Fold 5/5
+Evaluating untrained model (random weights)...
+Accuracy: 0.9485, F1: 0.9321
+
+Untrained model average metrics across 5 folds:
+accuracy: 0.5725
+precision: 0.6710
+recall: 0.5725
+f1: 0.5581
+
+=== 3. SIMPLER MODEL COMPARISON ===
+
+Training and evaluating a simpler BERT model
+Training simple model for 5 steps...
+Step 1, Loss: 0.0810
+Step 2, Loss: 0.2656
+Step 3, Loss: 0.2411
+Step 4, Loss: 0.0354
+Step 5, Loss: 0.0413
+
+Simple model metrics after minimal training:
+accuracy: 0.0145
+precision: 0.0002
+recall: 0.0145
+f1: 0.0004
+
+=== 4. DATA INTEGRITY CHECK ===
+Prompts with 100% consistent labels: 158/158 (100.00%)
+
+Analyzing common words by trait value (top 10):
+
+Openness:
+  Value Prefers routine, less curious: [('less', 1994727), ('prefers', 1987305), ('the', 1004760), ('user', 1004760), ('is', 1004760), ('described', 1004760), ('as', 1004760), ('routine', 1004760), ('curious', 1004760), ('and', 1004760)]
+  Value Very imaginative, loves new experiences: [('very', 11682), ('the', 9388), ('user', 9388), ('is', 9388), ('described', 9388), ('as', 9388), ('imaginative', 9388), ('loves', 9388), ('new', 9388), ('experiences', 9388)]
+  Value Somewhat open to new experiences: [('to', 1971), ('moderately', 1466), ('the', 1193), ('user', 1193), ('is', 1193), ('described', 1193), ('as', 1193), ('somewhat', 1193), ('open', 1193), ('new', 1193)]
+
+=== 5. TEST SET VS MODEL PREDICTION ANALYSIS ===
+
+Loading trained model...
+Trained model loaded successfully!
+
+Trained model metrics on test set:
+accuracy: 0.0300
+precision: 0.9100
+recall: 0.0300
+f1: 0.0491
+
+Random model metrics on same test set:
+accuracy: 0.0300
+precision: 0.0009
+recall: 0.0300
+f1: 0.0017
+
+Performance difference (trained - random):
+accuracy difference: 0.0000
+precision difference: 0.9091
+recall difference: 0.0000
+f1 difference: 0.0474
+
+=== 6. FEATURE IMPORTANCE ANALYSIS ===
+
+Analyzing token importance for a sample text:
+Text: The user is described as: Prefers routine, less curious, Disorganized, spontaneous, Introverted, prefers solitude, Competitive, less empathetic, and Emotionally stable, calm.
+Top 10 important tokens:
+  .: 1.0000
+  calm: 0.5503
+  ,: 0.5145
+  ,: 0.4278
+  :: 0.4098
+  ,: 0.4011
+  emotionally: 0.3885
+  em: 0.3873
+  ##etic: 0.3491
+  user: 0.3445
+
+=== 7. SUMMARY AND RECOMMENDATIONS ===
+
+Based on the validation analysis, here are possible explanations for the high performance:
+
+1. Data characteristics:
+   - Is there a strong correlation between specific words/patterns and personality traits?
+   - Are the labels too consistent for identical prompts?
+
+2. Model behavior:
+   - How does the trained model compare to random initialization?
+   - Does a simpler model achieve similar results with minimal training?
+
+3. Cross-validation reliability:
+   - Are results consistent across different data splits?
+   - Does random weight initialization still yield high accuracy?
+
+Recommended next steps:
+1. If trained model significantly outperforms random, the model is learning real patterns
+2. If the simpler model achieves similar results, consider using it for efficiency
+3. If duplicate/correlated data is found, clean the dataset and retest
+4. Consider external validation with a completely different dataset
+5. Implement additional regularization techniques if overfitting is suspected
+
+
+✅ Validation analysis completed successfully!
